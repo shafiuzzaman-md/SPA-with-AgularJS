@@ -1,0 +1,47 @@
+﻿<div class="panel panel-info" ng-controller="registerController as vm">
+    <div class="panel-heading">Register</div>
+    <div class="panel-body">
+        <form name="form" ng-submit="vm.register()" role="form">
+            <div class="form-group">
+                <label for="fullname">Full name</label>
+                <input type="text" class="form-control" ng-model="vm.user.name" required />
+            </div>
+
+
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="text" class="form-control" datePicker ng-model="vm.user.dob" />
+            </div>
+
+            <div class="form-group">
+                <label for="sex">Sex </label>
+                <select ng-model="vm.user.sex" class="form-control"
+                        ng-options="option.id as option.name for option in vm.genderTypes">
+                    <option value=''>- Please Choose -</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="body">About yourself</label>
+                <textarea id="body" class="form-control"
+                          rows="6" ng-model="vm.user.about"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="username">UserId</label>
+                <input type="text" class="form-control" ng-model="vm.user.username" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" ng-model="vm.user.password" required />
+            </div>
+
+            <div class="form-actions">
+                <button class="btn btn-md btn-success" type="submit">Submit</button>
+                <a href="#/" class="btn tn-md btn-primary">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+</div>

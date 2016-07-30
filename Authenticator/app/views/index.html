@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>SPA using AngularJS and REST API</title>
+    <link href="../../contents/bootstrap.css" rel="stylesheet" />
+    <link href="../../contents/angular-bootstrap-datepicker.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <br />
+        <div class="row body-content">
+            <div class="col-sm-6 col-sm-offset-3">             
+                <div ng-view></div>
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+            </div>
+        </div>
+        <br />
+        <hr />
+        <div class="row">
+            <footer>
+                <p>&copy; 2016 - Md. Shafiuzzaman Hira</p>
+            </footer>
+        </div>
+    </div>
+
+    <!--lib-->
+    <script src="../../scripts/lib/jquery-2.0.3.min.js"></script>
+    <script src="../../scripts/lib/bootstrap.min.js"></script>
+    <script src="../../scripts/lib/angular.min.js"></script>
+    <script src="../../scripts/lib/angular-route.js"></script>
+    <script src="../../scripts/lib/angular-messages.min.js"></script>
+    <script src="../../scripts/lib/angular-bootstrap-datepicker.js"></script>
+
+    <!--app-->
+    <script src="../app.js"></script>
+
+    <!--service-->
+    <script src="../services/flashService.js"></script>
+    <script src="../services/dataService.js"></script>
+    <script src="../services/authenticatorService.js"></script>
+
+    <!--directive-->
+    <script src="../directives/datepicker.js"></script>
+
+    <!--controller-->
+    <script src="../controllers/loginController.js"></script>
+    <script src="../controllers/registerController.js"></script>
+    <script src="../controllers/homeController.js"></script>
+</body>
+</html>

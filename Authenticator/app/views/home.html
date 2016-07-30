@@ -1,0 +1,15 @@
+﻿
+<div ng-controller="homeController as vm">
+        <div class="row pull-right">
+            <h4>Hi {{vm.user.UserName}}!  <button class="btn btn-primary" ng-click="vm.logout()">Logout</button></h4>
+        </div>
+
+        <div class="row">
+            <ul class="col-sm-11 col-sm-offset-1 list-group">
+                <li class="list-group-item"><b>Full Name:</b> {{vm.user.Name}}</li>
+                <li class="list-group-item"><b>Date of Birth: </b>{{vm.user.DOB | date }}</li>
+                <li class="list-group-item"><b>Sex: </b>{{vm.user.Sex}}</li>
+                <li class="list-group-item"><b>Details: </b>{{vm.user.About}}</li>
+            </ul>
+        </div> 
+</div>
